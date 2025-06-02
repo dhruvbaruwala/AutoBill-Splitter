@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AutoBill Splitter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AutoBill Splitter</h1>
+
+    <section>
+      <h3>Add Participant</h3>
+      <input type="text" id="participantInput" placeholder="Enter name">
+      <button onclick="addParticipant()">Add</button>
+      <ul id="participantList"></ul>
+    </section>
+
+    <section>
+      <h3>Add Item</h3>
+      <input type="text" id="itemName" placeholder="Item name">
+      <input type="number" id="itemPrice" placeholder="Price">
+      <div>
+        <label for="payerSelect">Payer:</label>
+        <select id="payerSelect"></select>
+      </div>
+      <div id="participantCheckboxes"></div>
+      <button onclick="addItem()">Add Item</button>
+      <ul id="itemList"></ul>
+    </section>
+
+    <section>
+      <h3>Result</h3>
+      <button onclick="calculateSplit()">Calculate</button>
+      <div id="result"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
